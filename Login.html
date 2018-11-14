@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4 offset-md-4">
+            <div class="form-group">
+                <button type="button" class="btn btn-info btnModalLogin"> Login</button>
+                <button type="button" class="btn-warning btnModalRegister"> Register</button>
+            </div>
+        </div>
+
+        <!--Modal login-->
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLabelLogin"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabelLogin">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="formLogin">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="emailLogin" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="passwordLogin" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-outline-success" id="btn-submit">
+                                    Submit
+                                </button>
+                                <button type="reset" class="btn btn-outline-warning">
+                                    Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal login-->
+        <!--Modal register -->
+        <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalLabelRegister"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabelRegister">Register</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="formRegister">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" name="firstName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" name="lastName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="password">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm-password</label>
+                                <input type="password" name="confirm-password">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-success" id="btn-register">
+                                    Submit
+                                </button>
+                                <button type="reset" class="btn btn-outline-warning">
+                                    Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal Register-->
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+
+<script>
+    // if (confirm('As long as you love me')){
+    //     alert('Done');
+    // } else{
+    //     alert('never give up');
+    // }
+
+    // confirm('As long as you love me') ? alert('Done') : alert('No');
+    $(document).ready(function () {
+
+        $('#btn-submit').click(function () {
+            $('#formLogin').submit();
+        });
+
+        $('#formLogin').validate({
+            rules: {
+                emailLogin: {
+                    required: true,
+
+                },
+                passwordLogin: {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 15
+                }
+
+            },
+            messages: {
+                emailLogin: {
+                    required: 'Vui long nhap Email',
+
+                },
+                passwordLogin: {
+                    required: 'vui long nhap pass',
+                    minLength: 'Password qua ngan, it nhat phai {0} ky tu.',
+                    maxLength: 'Password qua dai, it nhat phai {0} ky tu.',
+                }
+            },
+
+        });
+
+        $('#formRegister').validate({
+            rules: {
+                firstName: {
+                    required: true,
+                    maxLength: 15,
+                },
+                lastName: {
+                    required: true,
+                    maxLength: 15,
+                },
+
+                email: {
+                    required: true,
+
+                },
+                password: {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 15,
+                },
+                'confirm-password': {
+                    equalTo: 'input[name="password"]'
+                },
+            },
+            messages:{
+                firstName: {
+                    required: 'vui long nhap ten',
+                    maxLength: 'Ten cua ban qua dai, nhieu nhat la {0} ki tu.'
+                },
+                lastName: {
+                    required: 'Vui long nhap ho',
+                    maxLength: 'Ho cua ban qua dai, nhieu nhat la {0} ki tu.'
+                },
+                email: {
+                    required: 'vui long nhap email',
+                    maxLength: 'Vui long nhap email.'
+                },
+                password: {
+                    required: 'vui long nhap pass',
+                    minLength: 'Password qua ngan.',
+                    maxLength: 'Password qua dai.',
+                },
+                'confirm-password' : {
+                    equalTo: 'Mat khau kong giong password.'
+                },
+             },
+        });
+
+        $('.btnModalLogin').click(function () {
+            $('#modalLogin').modal();
+        });
+
+        $('.btnModalRegister').click(function () {
+            $('#modalRegister').modal();
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+

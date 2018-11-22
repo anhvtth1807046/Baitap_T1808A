@@ -16,7 +16,7 @@
         <div class="col-md-4 offset-md-4">
             <div class="form-group">
                 <button type="button" class="btn btn-info btnModalLogin"> Login</button>
-                <button type="button" class="btn-warning btnModalRegister"> Register</button>
+                <button type="button" class="btn btn-warning btnModalRegister"> Register</button>
             </div>
         </div>
 
@@ -32,6 +32,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                        <div class="summary"></div>
                         <form action="" id="formLogin">
                             <div class="form-group">
                                 <label>Email</label>
@@ -67,6 +68,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                        <div class="summary"></div>
                         <form action="" id="formRegister">
                             <div class="form-group">
                                 <label>First Name</label>
@@ -89,7 +91,7 @@
                                 <input type="password" name="confirm-password">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-outline-success" id="btn-register">
+                                <button type="submit " class="btn btn-outline-success" id="btn-register">
                                     Submit
                                 </button>
                                 <button type="reset" class="btn btn-outline-warning">
@@ -125,6 +127,15 @@
     // }
 
     // confirm('As long as you love me') ? alert('Done') : alert('No');
+
+    var API_DOMAIN = 'https://2-dot-backup-server-001.appspot.com';
+    var LOGIN_API = API_DOMAIN + '/_api/v2/members/authentication';
+    var REGISTER_API = API_DOMAIN + '/_api/v2/members';
+    var SONG_DETAIL_API = API_DOMAIN + '/_api/v2/songs/detail';
+    var MY_SONG_API = API_DOMAIN + '/_api/v2/songs/get-mine';
+    var LIST_SONG_API = API_DOMAIN + '/_api/v2/songs/get-free-songs';
+    var CREATE_SONG_API = API_DOMAIN + '/_api/v2/songs';
+
     $(document).ready(function () {
 
         $('#btn-submit').click(function () {
@@ -139,8 +150,8 @@
                 },
                 passwordLogin: {
                     required: true,
-                    minLength: 6,
-                    maxLength: 15
+                    minlength: 6,
+                    maxlength: 15
                 }
 
             },
@@ -151,22 +162,33 @@
                 },
                 passwordLogin: {
                     required: 'vui long nhap pass',
-                    minLength: 'Password qua ngan, it nhat phai {0} ky tu.',
-                    maxLength: 'Password qua dai, it nhat phai {0} ky tu.',
+                    minlength: 'Password qua ngan, it nhat phai {0} ky tu.',
+                    maxlength: 'Password qua dai, it nhat phai {0} ky tu.',
                 }
             },
 
         });
 
+        function formatDate(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+            return [year, month, day].join('_');
+
+        }
+
         $('#formRegister').validate({
             rules: {
                 firstName: {
                     required: true,
-                    maxLength: 15,
+                    maxlength: 15,
                 },
                 lastName: {
                     required: true,
-                    maxLength: 15,
+                    maxlength: 15,
                 },
 
                 email: {
@@ -175,35 +197,72 @@
                 },
                 password: {
                     required: true,
-                    minLength: 6,
-                    maxLength: 15,
+                    minlength: 6,
+                    maxlength: 15,
                 },
                 'confirm-password': {
                     equalTo: 'input[name="password"]'
                 },
             },
-            messages:{
+            messages: {
                 firstName: {
                     required: 'vui long nhap ten',
-                    maxLength: 'Ten cua ban qua dai, nhieu nhat la {0} ki tu.'
+                    maxlength: 'Ten cua ban qua dai, nhieu nhat la {0} ki tu.'
                 },
                 lastName: {
                     required: 'Vui long nhap ho',
-                    maxLength: 'Ho cua ban qua dai, nhieu nhat la {0} ki tu.'
+                    maxlength: 'Ho cua ban qua dai, nhieu nhat la {0} ki tu.'
                 },
                 email: {
                     required: 'vui long nhap email',
-                    maxLength: 'Vui long nhap email.'
+                    maxlength: 'Vui long nhap email.'
                 },
                 password: {
                     required: 'vui long nhap pass',
-                    minLength: 'Password qua ngan.',
-                    maxLength: 'Password qua dai.',
+                    minlength: 'Password qua ngan.',
+                    maxlength: 'Password qua dai.',
                 },
-                'confirm-password' : {
+                'confirm-password': {
                     equalTo: 'Mat khau kong giong password.'
                 },
-             },
+            },
+            submitHandler: function (form, event) {
+                event.preventDefault();
+                var senderObject = {
+                    firstName: $(form["firstName"]).val(),
+                    lastName: $(form["lastName"]).val(),
+                    password: $(form["password"]).val(),
+                    address: $(form["address"]).val(),
+                    phone: $(form["phone"]).val(),
+                };
+                $.ajax({
+                    url: REGISTER_API,
+                    method: 'POST',
+                    contentType: 'application/json; charset=utf-8;',
+                    data: JSON.stringify(senderObject),
+
+                    success: function (data, textStatus, jqXHR) {
+                        console.log('success');
+                        console.log(data);
+                        console.log('-----');
+                        console.log(data.responseText);
+                        console.log('-----');
+                        console.log(textStatus);
+                        console.log('-----');
+                        console.log(jqXHR);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        if (Object.keys(jqXHR.responseJSON.error).length > 0) {
+                            $('.summary')
+                                .text(`Please fix ${Object.keys(jqXHR.responseJSON.error).length} bellow! `);
+                            validator.showErrors(jqXHR.responseJSON.error);
+                        }
+
+                    }
+
+                });
+                return false;
+            },
         });
 
         $('.btnModalLogin').click(function () {
@@ -218,7 +277,7 @@
 
 
 </script>
-
+<!--document.addEvenListener('DomContentLoaded', function)-->
 </body>
 </html>
 

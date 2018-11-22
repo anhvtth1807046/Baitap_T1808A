@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Song || Song I Like</title>
+    <meta property="og:url"
+          content="https://tooeasy2get2points.herokuapp.com/save-song.html"/>
+    <meta property="og:type" content="song"/>
+    <meta property="og:title" content="Create New Song || Song I Like"/>
+    <meta property="og:description" content="Create new and share your song"/>
+    <meta property="og:image"
+          content="https://tooeasy2get2points.herokuapp.com/img/share-home.png"/>
+    <link rel="icon" type="image/png" href="img/myfavicon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Create song</h1>
+<div class="container-fluid">
+    <div id="summary" >
+        <form action="" name="song-form" id="song-form" class="m-auto">
+            <div class="form-group row">
+                <label class="col-2">Name</label>
+                <input class="form-control col-4" type="text" name="name">
+            </div>
+            <div class="form-group row ">
+                <label class="col-2">Singer Name</label>
+                <input class="form-control col-4" type="text" name="singer">
+            </div>
+            <div class="form-group row ">
+                <label  class="col-2">Description</label>
+                <input class="form-control col-4" type="text" name="description">
+            </div>
+            <div class="form-group row ">
+                <label class="col-2">Author</label>
+                <input class="form-control col-4" type="text" name="author">
+            </div>
+            <div class="form-group row ">
+                <label class="col-2">Thumbnail</label>
+                <input class="form-control col-4" type="text" name="thumbnail">
+            </div>
+            <div class="form-group row ">
+                <label class="col-2">Link</label>
+                <input class="form-control col-4" type="text" name="link">
+            </div>
+            <div class="form-group row control pt-3">
+                <label>&nbsp;</label>
+                <input class="form-control col-2 btn btn-primary mr-2" type="submit" name="btn-submit" value="Submit">
+                <input class="form-control col-2 btn btn-secondary " type="reset" name="btn-reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</div>
+<script src="create-song.js"></script>
+</body>
+</html>

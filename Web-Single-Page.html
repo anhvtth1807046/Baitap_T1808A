@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .error{
+            color: #e25517;
+        }
+
+        .nav-bar-link {
+            background-color: #bbbbbb;
+            height: 40px;
+            width: 100%;
+            margin: 0;
+            position: relative;
+            padding: 0 18px;
+            overflow: hidden;
+            line-height: 40px;
+            list-style: none;
+            position: relative;
+            top: 0;
+        }
+        .nav-bar-link ul{
+            display: flex;
+            position: relative;
+            height: 40px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar-link ul li{
+            list-style: none;
+        }
+        .nav-bar-link ul li a{
+            text-decoration: none;
+            color: #363636;
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 10px 0 0;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        #main .img-child {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            text-align: center; }
+        #main .img-child img {
+            display: inline-flex;
+            width: 24%;
+            padding: 0;
+            box-sizing: border-box; }
+        #main .img-child img:hover {
+            opacity: .8; }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 m-0 p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                <a class="navbar-brand " href="mysong(Chay-dau-tien).html">
+                    <img src="https://static-zmp3.zadn.vn/skins/zmp3-v5.1/images/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto" style="">
+                        <li class="nav-item active">
+                            <a class="nav-link btnModalRegister" href="javascript:void (0)" >Đăng ký<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link btnModalLogin" href="javascript:void (0)" >Đăng nhập<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void (0)" id="ShowModalCreateSong">Create song</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Chủ đề
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Nhạc trẻ</a>
+                                <a class="dropdown-item" href="#">Nhạc trữ tình</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Nhạc hàn quốc</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link disabled" href="#"><i class="fas fa-home"></i>Nhạc cá nhân</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="nav-bar-link">
+    <ul>
+        <li>
+            <a href="zingmp3.html"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i> Zingchart</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-hashtag" aria-hidden="true"></i> Top 100</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com"><i class="fa fa-film" aria-hidden="true"></i> Video</a>
+        </li>
+    </ul>
+</div>
+
+<div class="row" style="margin: 20px 20px">
+    <div class="col-md-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                    <div class="carousel-item ">
+                        <img class="d-block w-100 h-25" src="https://photo-zmp3.zadn.vn/banner/0/f/5/8/0f58882d7793def73b5a908265e632c8.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 h-25" src="https://photo-zmp3.zadn.vn/banner/0/8/f/e/08fe9f3c4d5ded22698440254da8a318.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 h-25" src="https://photo-zmp3.zadn.vn/banner/1/2/4/4/12445d9f46098547c3acb9c5c64ec513.jpg" alt="Third slide">
+                    </div>
+                </div>
+            </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<!--Modal Create Song-->
+
+<div class="modal fade" id="ModalCreateSong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create Song</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" name="song-form" id="song-form" class="m-auto">
+                    <div class="form-group row">
+                        <label class="col-2">Name</label>
+                        <input class="form-control " type="text" name="name">
+                    </div>
+                    <div class="form-group row ">
+                        <label class="col-2">Singer Name</label>
+                        <input class="form-control " type="text" name="singer">
+                    </div>
+                    <div class="form-group row ">
+                        <label  class="col-2">Description</label>
+                        <input class="form-control " type="text" name="description">
+                    </div>
+                    <div class="form-group row ">
+                        <label class="col-2">Author</label>
+                        <input class="form-control" type="text" name="author">
+                    </div>
+                    <div class="form-group row ">
+                        <label class="col-2">Thumbnail</label>
+                        <input class="form-control" type="text" name="thumbnail">
+                    </div>
+                    <div class="form-group row ">
+                        <label class="col-2">Link</label>
+                        <input class="form-control " type="text" name="link">
+                    </div>
+                    <div class="form-group row control pt-3">
+                        <label>&nbsp;</label>
+                        <input class="form-control col-2 btn btn-primary mr-2" type="submit" name="btn-submit" value="Submit">
+                        <input class="form-control col-2 btn btn-secondary " type="reset" name="btn-reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 " id="listSong"></div>
+    </div>
+</div>
+
+<!--Modal login-->
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLabelLogin"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelLogin">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="summary"></div>
+                <form action="" id="formLogin">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="emailLogin" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="passwordLogin" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-outline-success" id="btn-submit">
+                            Submit
+                        </button>
+                        <button type="reset" class="btn btn-outline-warning">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End modal login-->
+
+<!--Modal register -->
+<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalLabelRegister"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabelRegister">Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="summary"></div>
+                <form action="" id="formRegister">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="firstName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" name="phone" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Avatar</label>
+                        <input type="text" name="avatar" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" name="address" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm-password</label>
+                        <input type="password" name="confirm-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit " class="btn btn-outline-success" id="btn-register">
+                            Register
+                        </button>
+                        <button type="reset" class="btn btn-outline-warning">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End modal Register-->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card" style="background-color: white; Border: 2px dashed #111; width: 100%; height: 90px">
+            <div class="card-body" style="color: #F5F5F5";>
+                This is some text within a card body.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="create-song.js"></script>
+<script>
+    // if (confirm('As long as you love me')){
+    //     alert('Done');
+    // } else{
+    //     alert('never give up');
+    // }
+
+    // confirm('As long as you love me') ? alert('Done') : alert('No');
+
+    var API_DOMAIN = 'https://2-dot-backup-server-001.appspot.com';
+    var LOGIN_API = API_DOMAIN + '/_api/v2/members/authentication';
+    var REGISTER_API = API_DOMAIN + '/_api/v2/members';
+    var SONG_DETAIL_API = API_DOMAIN + '/_api/v2/songs/detail';
+    var MY_SONG_API = API_DOMAIN + '/_api/v2/songs/get-mine';
+    var LIST_SONG_API = API_DOMAIN + '/_api/v2/songs/get-free-songs';
+    var CREATE_SONG_API = API_DOMAIN + '/_api/v2/songs';
+
+    $(document).ready(function () {
+
+        getSong();
+
+        $('#btn-submit').click(function () {
+            $('#formLogin').submit();
+        });
+
+        $('#formLogin').validate({
+            rules: {
+                emailLogin: {
+                    required: true,
+
+                },
+                passwordLogin: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15
+                }
+
+            },
+            messages: {
+                emailLogin: {
+                    required: 'Vui lòng nhập Email',
+
+                },
+                passwordLogin: {
+                    required: 'Vui lòng nhập pass',
+                    minlength: 'Password quá ngắn, ít nhất phải {0} ký tự.',
+                    maxlength: 'Password quá dài, ít nhất phải {0} ký tự.',
+                }
+            },
+            submitHandler: function (form, event) {
+                event.preventDefault();
+                var senderObject = {
+                    password: $('form input[name="passwordLogin"]').val(),
+                    email: $('form input[name="emailLogin"]').val(),
+                };
+                $.ajax({
+                    url: LOGIN_API,
+                    method: 'POST',
+                    contentType: 'application/json; charset=utf-8;',
+                    data: JSON.stringify(senderObject),
+
+                    success: function (res) {
+                        swal("Đăng nhập thành công.", "", "success");
+                        localStorage.setItem('token', res.token);
+                        $('#modalLogin').modal('hide');
+                    },
+                    error: function (msg) {
+                        console.log("Fail");
+                    }
+
+                });
+                return false;
+            },
+        });
+
+        function formatDate(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+            return [year, month, day].join('_');
+
+        }
+
+        $('#song-form').validate({
+            rules: {
+                name: {
+                    required: true,
+                    // minlength: 2,
+                    // maxlength: 100
+                },
+                singer: {
+                    required: true,
+                    // minlength: 2,
+                    // maxlength: 30
+                },
+                author: {
+                    required: true,
+                    // minlength: 2,
+                    // maxlength: 30
+                },
+                thumbnail: {
+                    required: true,
+                },
+                link: {
+                    required: true
+                },
+            },
+            messages: {
+                name: {
+                    required: 'Vui lòng nhập tên của bài hát.',
+                    // minlength: 'Tên quá ngắn, vui lòng nhập ít nhất {0} ký tự',
+                    // maxlength: 'Tên quá dài, vui lòng nhập nhiều nhất {0} ký tự',
+                },
+                singer: {
+                    required: 'Vui lòng nhập tên ca sỹ.',
+                    // minlength: 'Tên quá ngắn, vui lòng nhập ít nhất {0} ký tự',
+                    // maxlength: 'Tên quá dài, vui lòng nhập nhiều nhất {0} ký tự',
+                },
+                author: {
+                    required: 'Vui lòng nhập tên tác giả.',
+                    // minlength: 'Tên quá ngắn, vui lòng nhập ít nhất {0} ký tự',
+                    // maxlength: 'Tên quá dài, vui lòng nhập nhiều nhất {0} ký tự',
+                },
+                thumbnail: {
+                    required: 'Vui lòng nhập link ảnh của bài hát.',
+                },
+                link: {
+                    required: 'Vui lòng nhập link bài hát.',
+                }
+            },
+            submitHandler: function (form, event) {
+                event.preventDefault();
+                var senderSaveObject = {
+                    name: $(form["name"]).val(),
+                    singer: $(form["singer"]).val(),
+                    author: $(form["author"]).val(),
+                    thumbnail: $(form["thumbnail"]).val(),
+                    link: $(form["link"]).val(),
+                };
+                $.ajax(
+                    {
+                        url: 'https://2-dot-backup-server-001.appspot.com/_api/v2/songs',
+                        type: 'POST',
+                        contentType: "application/json; charset=utf-8",
+                        // Authorization: "Basic " + localStorage.getItem('token-key'),
+                        beforeSend: function (xhr) {
+                            /* Authorization header */
+                            xhr.setRequestHeader("Authorization", "Basic " +localStorage.getItem('token'));
+                        },
+                        data: JSON.stringify(senderSaveObject),
+                        success: function (res) {
+                            swal("Đăng bài hát thành công.", res.name , "success");
+                            $('#ModalCreateSong').modal('hide');
+                            var content = '<div class="row">' +
+                                '<div class="col-md-12">\n' +
+                                '            <div class="col-md-2" style="background: url(' + res.thumbnail +') no-repeat;background-size: cover; height: 150px; ">\n' +
+                                '            </div>\n' +
+                                '            <div class="col-md-7">\n' +
+                                res.name +
+                                '            </div>\n' +
+                                '            <div class="col-md-2">\n' +
+                                '                <i class="fas fa-play"></i>\n' +
+                                '            </div>\n' +
+                                '        </div>' +
+                                '</div>';
+                            $("#listSong").prepend(content);
+                        },
+                        error: function (msg) {
+                            swal("Đăng bài hát thất bại!", "", "error");
+                        }
+                    }
+                );
+                return false;
+            }
+        });
+
+
+        $('#formRegister').validate({
+            rules: {
+                firstName: {
+                    required: true,
+                    maxlength: 15,
+                },
+                lastName: {
+                    required: true,
+                    maxlength: 15,
+                },
+
+                email: {
+                    required: true,
+
+                },
+                phone:{
+                    required: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15,
+                },
+                'confirm-password': {
+                    equalTo: 'input[name="password"]'
+                },
+            },
+            messages: {
+                firstName: {
+                    required: 'Vui lòng nhập tên của bạn.',
+                    maxlength: 'Tên của bạn quá dài, nhiều nhất là {0} ký tự.'
+                },
+                phone: {
+                  required: "Vui lòng nhập Phone"
+                },
+                lastName: {
+                    required: 'Vui lòng nhập họ.',
+                    maxlength: 'Họ của bạn quá dài, nhiều nhất là {0} ký tự.'
+                },
+                email: {
+                    required: 'Vui lòng nhập email',
+                    maxlength: 'email quá dài.'
+                },
+                password: {
+                    required: 'Vui lòng nhập pass',
+                    minlength: 'Password quá ngắn.',
+                    maxlength: 'Password quá dài.',
+                },
+                'confirm-password': {
+                    equalTo: 'Mật khẩu không giống password.'
+                },
+            },
+            submitHandler: function (form, event) {
+                event.preventDefault();
+                var senderObject = {
+                    firstName: $('form input[name="firstName"]').val(),
+                    lastName: $('form input[name="lastName"]').val(),
+                    password: $('form input[name="password"]').val(),
+                    email: $('form input[name="email"]').val(),
+                    address: $('form input[name="address"]').val(),
+                    phone: $('form input[name="phone"]').val(),
+                    avatar: $('form input[name="avatar"]').val(),
+                };
+                $.ajax({
+                    url: REGISTER_API,
+                    method: 'POST',
+                    contentType: 'application/json; charset=utf-8;',
+                    data: JSON.stringify(senderObject),
+
+                    success: function (res) {
+                        swal("Dang ky thanh cong", "", "success");
+                        $('#modalRegister').modal('hide');
+                    },
+                    error: function (msg) {
+                        console.log("Fail");
+                    }
+
+                });
+                return false;
+            },
+        });
+
+        $('#ShowModalCreateSong').click(function () {
+            $('#ModalCreateSong').modal();
+        });
+        $('.btnModalLogin').click(function () {
+            $('#modalLogin').modal();
+        });
+
+        $('.btnModalRegister').click(function () {
+            $('#modalRegister').modal();
+        });
+
+        function getSong() {
+            $.ajax({
+                url:LIST_SONG_API,
+                method:'GET',
+                success:function (res) {
+                    var content = '';
+                    for (var i = 0; i < res.length; i++) {
+                        content += '<div class="row">' +
+                            '<div class="col-md-12">\n' +
+                            '            <div class="col-md-2" style="background: url(' + res[i].thumbnail +') no-repeat;background-size: cover; height: 150px; ">\n' +
+                            '            </div>\n' +
+                            '            <div class="col-md-7">\n' +
+                             res[i].name +
+                            '            </div>\n' +
+                            '            <div class="col-md-2">\n' +
+                            '                <i class="fas fa-play"></i>\n' +
+                            '            </div>\n' +
+                            '        </div>' +
+                            '</div>';
+                    }
+                    $('#listSong').html(content);
+                },
+                error:function () {
+                    swal("Lấy bài hát thành công.", "", "error");
+                }
+            });
+        }
+
+
+    });
+
+
+</script>
+</body>
+</html>

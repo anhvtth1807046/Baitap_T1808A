@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>As2V - Music</title>
+    <!-------**--**-----------**--**-------------**--**------------**--**------------**--**-------------->
+    <!-----**********-------**********---------**********--------**********--------**********------------>
+    <!-----**********-------**********---------**********--------**********--------**********------------>
+    <!-------******-----------******-------------******------------******------------******-------------->
+    <!---------**---------------**-----------------**----------------**----------------**---------------->
+    
+    <!--------*****---------------------------------------------------------------****------------****-->
+    <!-----*****-*****--------------------------------------------------------------****----------****--->
+    <!----****-----***-------****----------------------------------------------------****--------****---->
+    <!-----------*****-------****---------***--------****--------***------******------****------****----->
+    <!-------******----------****----------***------******------***-----****--****-----****----****------>
+    <!-----*****-------------****-----------***----***--***----***-----****----****-----****--****------->
+    <!----***------****------****------------***--***----***--***------****----****------********-------->
+    <!----****-----****------****-------------******------******--------****--****--------******--------->
+    <!-----****---****-------***********-------****--------****-----------******-----------****---------->
+    <!-------*******---------***********--------**----------**------------------------------**----------->
+    
+    <!-------**--**-----------**--**-------------**--**------------**--**------------**--**-------------->
+    <!-----**********-------**********---------**********--------**********--------**********------------>
+    <!-----**********-------**********---------**********--------**********--------**********------------>
+    <!-------******-----------******-------------******------------******------------******-------------->
+    <!---------**---------------**-----------------**----------------**----------------**---------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="icon" type="image/png" href="https://demo-app-html.herokuapp.com/img/favicon.png">
+    <!--Main CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!--Fontawesome 4.7.0-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!--Boostrap 4.0.0-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!--Customize CSS-->
+    <link rel="stylesheet" href="css/myStyle.css">
+</head>
+<body class="with-search-header">
+<div class="container-fluid no-padding">
+    <div class="row no-margin">
+        <div class="col-xs-12 no-padding">
+            <header>
+                <div class="search-header"><a href="#" class="logo"><i class="music-logo"></i></a>
+                    <div class="input-group search-group">
+                        <form action="/">
+                            <input type="text" name="search" placeholder="Tên bài bài hát...." class="form-control">
+                            <input type="submit" value="submit" class="hidden">
+                            <span class="input-group-btn">
+	                    		<button type="button" class="btn">
+	                    			<i class="music-search"></i>
+	                    		</button>
+	                    	</span>
+                        </form>
+                    </div>
+                    <div class="account-icons">
+                        <ul>
+                            <li>
+                                <a href="javascript:void (0)" class="add-to-cart linkControl btnModalLogin" style="font-size: 17px; color: #ececec; font-weight: 400;">
+                                    <i class="fa fa-user-o" aria-hidden="true"></i> Đăng nhập
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void (0)" class="add-to-cart linkControl btnModalRegister" style="font-size: 17px; color: #ececec; font-weight: 400;">
+                                    <i class="fa fa-user-plus" aria-hidden="true"></i> Đăng ký
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void (0)" class="add-to-cart linkControl d-none" title="Upload bài hát" id="ShowModalCreateSong" style="font-size: 17px; color: #ececec; font-weight: 400;">
+                                    <i class="fa fa-upload" aria-hidden="true"></i> Upload
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void (0)" class="add-to-cart linkControl d-none" id="Logout" style="font-size: 17px; color: #ececec; font-weight: 400;">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="simple-sidebar">
+                    <ul>
+                        <li><a href="#"><img src="img/albums-icon.png" alt="">
+                            <div class="hover-effect">
+                                <div class="text">Albums</div>
+                                <div class="dot"><i class="fa fa-circle"></i></div>
+                            </div>
+                        </a></li>
+                        <li><a href="#"><img src="img/add_song.png" alt="">
+                            <div class="hover-effect">
+                                <div class="text">Bài hát</div>
+                                <div class="dot"><i class="fa fa-circle"></i></div>
+                            </div>
+                        </a></li>
+                        <li><a href="#"><img src="img/heart-icon.png" alt="">
+                            <div class="hover-effect">
+                                <div class="text">My Song</div>
+                                <div class="dot"><i class="fa fa-circle"></i></div>
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="introductory-slider">
+                <ul class="slides">
+                    <li>
+                        <div style="background-image: url('https://zmp3-photo-fbcrawler.zadn.vn/thumb_video/0/d/a/f/0daf4d5bf746177f55bd22ce0d77cf64.jpg')" class="item">
+                            <div class="slide-title">
+                                <h3 style="position: relative">
+                                    AV<i class="fa fa-heart" style="font-size: 15px; color: rgba(233,29,43,0.72);position: relative; top: 0;"></i>Music
+                                </h3>
+                                <div class="line"><img src="img/title-underline.png" alt=""></div>
+                            </div>
+                            <div class="song-title" style="font-family: 'Montserrat', sans-serif !important;">Em ngủ
+                                chưa?
+                            </div>
+                            <a href="#" data-play="1" class="play play-song">Nghe
+                                luôn<i class="fa fa-play"></i></a><a href="#discover" class="more more-with-navigation">Xem
+                            thêm <i class="fa fa-angle-down"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="background-image: url('https://photo-zmp3.zadn.vn/banner/9/b/2/8/9b2860c6cd82ae5dc2e2684c87de454d.jpg')" class="item">
+                            <div class="slide-title">
+                                <h3 style="position: relative">
+                                    AV<i class="fa fa-heart" style="font-size: 15px; color: rgba(233,29,43,0.72);position: relative; top: 0;"></i>Music
+                                </h3>
+                                <div class="line"><img src="img/title-underline.png" alt=""></div>
+                            </div>
+                            <div class="song-title" style="font-family: 'Montserrat', sans-serif !important;">Yêu một
+                                người sau anh
+                            </div>
+                            <a href="#" data-play="1" class="play play-song">Nghe
+                                luôn<i class="fa fa-play"></i></a><a href="#discover" class="more more-with-navigation">Xem
+                            thêm <i class="fa fa-angle-down"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div style="background-image: url('https://photo-zmp3.zadn.vn/banner/0/f/5/8/0f58882d7793def73b5a908265e632c8.jpg')" class="item">
+                            <div class="slide-title">
+                                <h3 style="position: relative">
+                                    AV<i class="fa fa-heart" style="font-size: 15px; color: rgba(233,29,43,0.72);position: relative; top: 0;"></i>Music
+                                </h3>
+                                <div class="line"><img src="img/title-underline.png" alt=""></div>
+                            </div>
+                            <div class="song-title" style="font-family: 'Montserrat', sans-serif !important;">Duyên mình
+                                lỡ
+                            </div>
+                            <a href="#" data-play="1" class="play play-song">Nghe
+                                luôn<i class="fa fa-play"></i></a><a href="#discover" class="more more-with-navigation">Xem
+                            thêm <i class="fa fa-angle-down"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="discover" class="discover-container">
+                <div class="row no-margin">
+                    <div class="col-sm-6">
+                        <h6>Start to</h6>
+                        <h3 style="font-family: 'Montserrat', 'sans-serif';" id="category">Bài hát nổi bật</h3>
+                    </div>
+                    <div class="col-sm-6"><a href="#" class="view-all">Xem tất cả <i class="music-plus-button"></i></a>
+                        <div class="songs-select">
+                            <label>
+                                <select class="select">
+                                    <option value="1">Bài hát</option>
+                                    <option value="2">Albums</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-margin" id="listSong">
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <a href="javascript:void (0)" id="readMoreSong" class="pr-5" style="font-size: 17px">Xem
+                            thêm</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="audio-player" class="audio-player">
+                <div id="jpId"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6 no-padding">
+                            <img class="song-image hidden-sm hidden-xs" src="img/Baby.png" alt=""/>
+                            <div class="song">
+                                <img src="content/player-bars.png" alt=""/>
+                                <div class="song-title" style="font-family: 'Montserrat','sans-serif';">Nghe nhạc</div>
+                                <div class="price author" style="font-size: 9px"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-xs-6 no-padding">
+                            <div class="player-controls">
+                                <div class="control hidden-sm hidden-xs">
+                                    <button type="button" class="audio-play"><i class="music-player-play-outline"></i>
+                                    </button>
+                                    <button type="button" class="audio-pause"><i class="music-player-pause"></i>
+                                    </button>
+                                </div>
+                                <div class="control">
+                                    <button type="button" class="audio-mute"><i class="fa fa-volume-up"></i></button>
+                                    <button type="button" class="audio-unmute"><i class="fa fa-volume-off"></i></button>
+                                    <div class="jp-volume-bar">
+                                        <div class="jp-volume-bar-value"></div>
+                                    </div>
+                                </div>
+                                <div class="control visible-sm visible-xs">
+                                    <button type="button" class="audio-play"><i class="music-player-play-outline"></i>
+                                    </button>
+                                    <button type="button" class="audio-pause"><i class="music-player-pause"></i>
+                                    </button>
+                                </div>
+                                <div class="player-progress hidden-sm hidden-xs">
+                                    <div class="time">
+                                        <span class="currentTime"></span> / <span class="duration"></span>
+                                    </div>
+                                    <div class="jp-progress">
+                                        <div class="jp-seek-bar">
+                                            <div class="jp-play-bar"></div>
+                                        </div>
+                                    </div>
+                                    <ul class="socials">
+                                        <li>
+                                            <button class="add-to-cart-button">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+											        <g class="base">
+											            <polygon fill="transparent" stroke-width="2" stroke-miterlimit="10" points="35.818,37 14,37 15.091,16 35,16   ">
+											                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="points" from="35.818,37 14,37 15.091,16 35,16   " to="34.818,36 15,36 16.091,15 34,15" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="points" from="34.818,36 15,36 16.091,15 34,15" to="35.818,37 14,37 15.091,16 35,16  " begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											            </polygon>
+											            <rect x="17" y="13" fill="transparent" stroke-width="2" stroke-miterlimit="10" width="16" height="3">
+											                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="x" from="17" to="18" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="x" from="18" to="17" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="y" from="13" to="11" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="y" from="11" to="13" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="width" from="16" to="14" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="width" from="14" to="16" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="height" from="3" to="4" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="height" from="4" to="3" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											            </rect>
+											        </g>
+											        <g class="plus">
+											                <line class="first" fill="white" stroke-width="2" stroke-miterlimit="10" x1="25" y1="22" x2="25" y2="30">
+											                    <animate class="animate-second" attributeName="x1" from="25" to="20" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-second" attributeName="y1" from="22" to="26" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-second" attributeName="x2" from="25" to="23.828" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-second" attributeName="y2" from="30" to="29.828" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+
+											                    <animate class="animate-third" attributeName="x1" from="20" to="22.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-third" attributeName="y1" from="26" to="24" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-third" attributeName="x2" from="23.828" to="28.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-third" attributeName="y2" from="29.828" to="30" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="x1" from="22.5" to="25" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="y1" from="24" to="22" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="x2" from="28.5" to="25" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="y2" from="30" to="30" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                </line>
+											                <line class="second" fill="white" stroke-width="2" stroke-miterlimit="10" x1="21" y1="26" x2="29" y2="26">
+											                    <animate class="animate-first" attributeName="x2" from="29" to="31" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-second" attributeName="x1" from="21" to="23.465" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-second" attributeName="y1" from="26" to="29.535" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-second" attributeName="x2" from="31" to="31" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-second" attributeName="y2" from="26" to="23" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-third" attributeName="x1" from="23.465" to="22.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-third" attributeName="y1" from="29.535" to="30" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-third" attributeName="x2" from="31" to="28.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="animate-third" attributeName="y2" from="23" to="24" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="x1" from="22.5" to="21" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="y1" from="30" to="26" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="x2" from="28.5" to="29" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                    <animate class="added-animate-first" attributeName="y2" from="24" to="26" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+											                </line>
+											        </g>
+											    </svg>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="add-to-wishlist-button">
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+												    <g id=" top">
+												      <path class="smooth" fill="none" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M31.639,22.521 c1.535-1.484,2.396-3.5,2.396-5.66c0-4.337-3.511-7.862-7.825-7.862l0,0c-2.467,0-4.732,1.153-6.191,3.05 C18.558,10.153,16.294,9,13.827,9C9.513,9,6,12.525,6,16.862c0,2.036,0.774,3.971,2.185,5.445">
+														<animate class="animate-first" attributeName="d" from="M31.639,22.521 c1.535-1.484,2.396-3.5,2.396-5.66c0-4.337-3.511-7.862-7.825-7.862l0,0c-2.467,0-4.732,1.153-6.191,3.05 C18.558,10.153,16.294,9,13.827,9C9.513,9,6,12.525,6,16.862c0,2.036,0.774,3.971,2.185,5.445" to="M33.689,18.689c0.68-1.17,1.047-2.51,1.047-3.911c0-4.289-3.475-7.778-7.742-7.778l0,0c-2.441,0-4.684,1.142-6.126,3.018 C19.424,8.142,17.185,7,14.744,7C10.476,7,7,10.489,7,14.778c0,2.015,0.765,3.929,2.161,5.389l5.155,4.894" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												        <animate class="added-animate-first" attributeName="d" from="M33.689,18.689c0.68-1.17,1.047-2.51,1.047-3.911c0-4.289-3.475-7.778-7.742-7.778l0,0c-2.441,0-4.684,1.142-6.126,3.018 C19.424,8.142,17.185,7,14.744,7C10.476,7,7,10.489,7,14.778c0,2.015,0.765,3.929,2.161,5.389l5.155,4.894" to="M31.639,22.521 c1.535-1.484,2.396-3.5,2.396-5.66c0-4.337-3.511-7.862-7.825-7.862l0,0c-2.467,0-4.732,1.153-6.191,3.05 C18.558,10.153,16.294,9,13.827,9C9.513,9,6,12.525,6,16.862c0,2.036,0.774,3.971,2.185,5.445" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												      </path>
+												    </g>
+												    <g id="base">
+												      <path class="smooth" fill="none" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6">
+												        <animate class="animate-first" attributeName="d" from="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" to="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												        <animate class="animate-second smooth" attributeName="d" from="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" to="M25.264,31.527l-5.344-5.065" begin="indefinite" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+                                                        <animate class="added-animate-first" attributeName="d" from="M25.264,31.527l-5.344-5.065" to="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												      </path>
+												      <path class="smooth" fill="none" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6">
+												        <animate class="animate-first" attributeName="d" from="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" to="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												        <animate class="animate-second" attributeName="d" from="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" to="M19.919,31.527l5.345-5.065" begin="indefinite" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												        <animate class="added-animate-first" attributeName="d" from="M19.919,31.527l5.345-5.065" to="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												      </path>
+												    </g>
+											  	</svg>
+                                            </button>
+                                        </li>
+                                        <li><a class="replay off" href="#"><i class="music-player-replay"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="player-progress visible-sm visible-xs">
+                                <ul class="socials">
+                                    <li>
+                                        <button class="add-to-cart-button">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+										        <g class="base">
+										            <polygon fill="transparent" stroke-width="2" stroke-miterlimit="10" points="35.818,37 14,37 15.091,16 35,16   ">
+										                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="points" from="35.818,37 14,37 15.091,16 35,16   " to="34.818,36 15,36 16.091,15 34,15" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="points" from="34.818,36 15,36 16.091,15 34,15" to="35.818,37 14,37 15.091,16 35,16  " begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										            </polygon>
+										            <rect x="17" y="13" fill="transparent" stroke-width="2" stroke-miterlimit="10" width="16" height="3">
+										                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="x" from="17" to="18" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="x" from="18" to="17" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="y" from="13" to="11" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="y" from="11" to="13" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="width" from="16" to="14" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="width" from="14" to="16" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-first added-animate-first" attributeName="height" from="3" to="4" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                <animate attributeType="XML" class="animate-second added-animate-second" attributeName="height" from="4" to="3" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										            </rect>
+										        </g>
+										        <g class="plus">
+										                <line class="first" fill="white" stroke-width="2" stroke-miterlimit="10" x1="25" y1="22" x2="25" y2="30">
+										                    <animate class="animate-second" attributeName="x1" from="25" to="20" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-second" attributeName="y1" from="22" to="26" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-second" attributeName="x2" from="25" to="23.828" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-second" attributeName="y2" from="30" to="29.828" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="x1" from="20" to="22.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="y1" from="26" to="24" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="x2" from="23.828" to="28.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="y2" from="29.828" to="30" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="x1" from="22.5" to="25" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="y1" from="24" to="22" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="x2" from="28.5" to="25" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="y2" from="30" to="30" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+
+										                </line>
+										                <line class="second" fill="white" stroke-width="2" stroke-miterlimit="10" x1="21" y1="26" x2="29" y2="26">
+										                    <animate class="animate-first" attributeName="x2" from="29" to="31" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-second" attributeName="x1" from="21" to="23.465" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-second" attributeName="y1" from="26" to="29.535" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-second" attributeName="x2" from="31" to="31" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-second" attributeName="y2" from="26" to="23" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="x1" from="23.465" to="22.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="y1" from="29.535" to="30" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="x2" from="31" to="28.5" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="animate-third" attributeName="y2" from="23" to="24" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="x1" from="22.5" to="21" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="y1" from="30" to="26" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="x2" from="28.5" to="29" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                    <animate class="added-animate-first" attributeName="y2" from="24" to="26" begin="indefinite" dur="0.2s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+										                </line>
+										        </g>
+										    </svg>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="add-to-wishlist-button">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+												<g id=" top">
+												  <path class="smooth" fill="none" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M31.639,22.521 c1.535-1.484,2.396-3.5,2.396-5.66c0-4.337-3.511-7.862-7.825-7.862l0,0c-2.467,0-4.732,1.153-6.191,3.05 C18.558,10.153,16.294,9,13.827,9C9.513,9,6,12.525,6,16.862c0,2.036,0.774,3.971,2.185,5.445">
+													<animate class="animate-first" attributeName="d" from="M31.639,22.521 c1.535-1.484,2.396-3.5,2.396-5.66c0-4.337-3.511-7.862-7.825-7.862l0,0c-2.467,0-4.732,1.153-6.191,3.05 C18.558,10.153,16.294,9,13.827,9C9.513,9,6,12.525,6,16.862c0,2.036,0.774,3.971,2.185,5.445" to="M33.689,18.689c0.68-1.17,1.047-2.51,1.047-3.911c0-4.289-3.475-7.778-7.742-7.778l0,0c-2.441,0-4.684,1.142-6.126,3.018 C19.424,8.142,17.185,7,14.744,7C10.476,7,7,10.489,7,14.778c0,2.015,0.765,3.929,2.161,5.389l5.155,4.894" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+													<animate class="added-animate-first" attributeName="d" from="M33.689,18.689c0.68-1.17,1.047-2.51,1.047-3.911c0-4.289-3.475-7.778-7.742-7.778l0,0c-2.441,0-4.684,1.142-6.126,3.018 C19.424,8.142,17.185,7,14.744,7C10.476,7,7,10.489,7,14.778c0,2.015,0.765,3.929,2.161,5.389l5.155,4.894" to="M31.639,22.521c1.535-1.484,2.396-3.5,2.396-5.66c0-4.337-3.511-7.862-7.825-7.862l0,0c-2.467,0-4.732,1.153-6.191,3.05C18.558,10.153,16.294,9,13.827,9C9.513,9,6,12.525,6,16.862c0,2.036,0.774,3.971,2.185,5.445" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												  </path>
+												</g>
+												<g id="base">
+												  <path class="smooth" fill="none" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6">
+													<animate class="animate-first" attributeName="d" from="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" to="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+													<animate class="animate-second smooth" attributeName="d" from="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" to="M25.264,31.527l-5.344-5.065" begin="indefinite" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+													<animate class="added-animate-first" attributeName="d" from="M25.264,31.527l-5.344-5.065" to="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												  </path>
+												  <path class="smooth" fill="none" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6">
+													<animate class="animate-first" attributeName="d" from="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" to="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+													<animate class="animate-second" attributeName="d" from="M18.116,28.664l1.964,1.863l0.788,0.796l0.788-0.796l8.68-8.229" to="M19.919,31.527l5.345-5.065" begin="indefinite" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+													<animate class="added-animate-first" attributeName="d" from="M19.919,31.527l5.345-5.065" to="M8.3,22.299L19.221,33l0.796,0.803L20.813,33L31.6,22.6" begin="indefinite" dur="0.1s" fill="freeze" calcMode="spline" keySplines="0.5 0 0.5 0"></animate>
+												  </path>
+												</g>
+											</svg>
+                                        </button>
+                                    </li>
+                                    <li><a class="replay off hidden-xs" href="#"><i class="music-player-replay"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jp-progress visible-sm visible-xs">
+                        <div class="jp-seek-bar">
+                            <div class="jp-play-bar"></div>
+                        </div>
+                    </div>
+                    <div class="jp-playlist">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer class="main-footer">
+                <div class="row no-margin">
+                    <div class="col-md-2 col-sm-1">
+                        <div class="footer-logo footer-widget"><i class="music-logo"></i></div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="footer-text footer-widget footer-border-right">
+                            <div class="text">
+                                © 2015 VNG Corporation
+    
+                                Giấy phép MXH số 314/GP-BTTTT.
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vine"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="footer-newsletter footer-widget footer-border-right">
+                            <h6>Đăng ký nhận thông báo</h6>
+                            <h3>Tin mới</h3>
+                            <div class="input-group">
+                                <form action="/">
+                                    <input type="email" name="newsletter-email" placeholder="E-mail" class="form-control">
+                                    <input type="submit" value="submit" class="hidden">
+                                </form>
+                                <i class="fa fa-envelope-o"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul class="footer-links footer-widget">
+                            <li><a href="#">iTunes</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Thông tin web</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">Developed by <a href="https://www.facebook.com/SlowVphotographer" target="_blank">Hoài Anh</a></div>
+            </footer>
+            
+            <!-- ====== * ===== << MODAL >> ====== * =====-->
+            <!--Modal Create Song-->
+            <div class="modal fade" id="ModalCreateSong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-info" id="exampleModalLabel">Upload bài hát</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" name="song-form" id="song-form" class="m-auto pl-3 pr-3">
+                                <div class="form-group ">
+                                    <label>Tên bài hát</label>
+                                    <input class="form-control " type="text" name="name" title="" onkeypress="removeTextError()">
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 col-sm-6 col-12">
+                                        <div class="form-group ">
+                                            <label>Ca sĩ</label>
+                                            <input class="form-control " type="text" name="singer" title="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-12">
+                                        <div class="form-group  ">
+                                            <label>Tác giả</label>
+                                            <input class="form-control" type="text" name="author" title="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label>Thông tin</label>
+                                    <input class="form-control" type="text" name="description" title="">
+                                </div>
+                                <div class="form-group  ">
+                                    <label>Ảnh</label>
+                                    <input class="form-control" type="text" name="thumbnail" title="">
+                                </div>
+                                <div class="form-group ">
+                                    <label>Link</label>
+                                    <input class="form-control " type="text" name="link" title="">
+                                </div>
+                                <div class="form-group  pt-3 text-center">
+                                    <button type="submit" class="btn btn-outline-success p-3">
+                                        Upload
+                                    </button>
+                                    <span class="m-3"></span>
+                                    <button type="reset" class="btn btn-outline-warning p-3">
+                                        Làm lại
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Modal login-->
+            <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLabelLogin"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-info" id="modalLabelLogin">Đăng nhập</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="summary"></div>
+                            <form action="" id="formLogin">
+                                <div class="form-group pl-5 pr-5">
+                                    <label>Email</label>
+                                    <input type="email" name="emailLogin" class="form-control" onkeypress="removeTextError()" title="" placeholder="Nhập email...">
+                                    <div class="email-msg error"></div>
+                                </div>
+                                <div class="form-group pl-5 pr-5">
+                                    <label>Mật khẩu</label>
+                                    <input type="password" name="passwordLogin" class="form-control" title="" placeholder="Nhập mặt khẩu...">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="button" class="btn btn-outline-success p-3"  id="btn-submit">
+                                        Đăng nhập
+                                    </button>
+                                    <span class="m-3"></span>
+                                    <button type="reset" class="btn btn-outline-warning p-3">
+                                        Làm lại
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Modal register -->
+            <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalLabelRegister"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-info" id="modalLabelRegister">Đăng ký</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="summary"></div>
+                            <form action="" id="formRegister">
+                                <div class="form-row">
+                                    <div class="col-md-4 col-sm-4 col-12">
+                                        <div class="form-group">
+                                            <label>Tên</label>
+                                            <input type="text" name="firstName" class="form-control" title="" onkeypress="removeTextError()" placeholder="Tên của bạn...">
+                                            <div class="firstName-msg error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-12">
+                                        <div class="form-group">
+                                            <label>Họ</label>
+                                            <input type="text" name="lastName" class="form-control" title="" onkeypress="removeTextError()" placeholder="Họ của bạn...">
+                                            <div class="lastName-msg error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-12">
+                                        <div class="form-group">
+                                            <label>Số điện thoại</label>
+                                            <input type="text" name="phone" class="form-control" title="" onkeypress="removeTextError()" placeholder="Số điện thoại của bạn...">
+                                            <div class="phone-msg error"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" name="email" class="form-control" title="" onkeypress="removeTextError()" placeholder="VD: example123@gmail.com">
+                                            <div class="email-msg error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label>Ảnh cá nhân</label>
+                                            <input type="text" name="avatar" class="form-control" title="" onkeypress="removeTextError()" placeholder="Ảnh đại diện...">
+                                            <div class="avatar-msg error"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label>Mật khẩu</label>
+                                            <input type="password" name="password" onkeypress="removeTextError()" class="form-control" title="" placeholder="Mật khẩu...">
+                                            <div class="password-msg error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-12">
+                                        <div class="form-group">
+                                            <label>Nhập lại mật khẩu</label>
+                                            <input type="password" name="confirm-password" class="form-control" title="" placeholder="Nhập lại mật khẩu...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Địa chỉ</label>
+                                    <input type="text" name="address" class="form-control" onkeypress="removeTextError()" title="" placeholder="Địa chỉ bạn đang ở...">
+                                    <div class="address-msg error"></div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-outline-success p-3" id="btn-register">
+                                        Đăng ký
+                                    </button>
+                                    <span class="m-3"></span>
+                                    <button type="reset" class="btn btn-outline-warning p-3">
+                                        Làm lại
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ====== * ===== << END MODAL >> ====== * =====-->
+            
+            <!-- ====== * ===== << JAVASCRIPT >> ====== * =====-->
+            <!--Jquery-->
+            <script src='js/jquery.js'></script>
+            
+            <!--Libraries-->
+            <script src='js/libraries.min.js'></script>
+            
+            <!--Sweet alert-->
+            <script src='js/sweetAlert2.js'></script>
+            
+            <!--Poppup của bootstrap-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            
+            <!--Bootstrap-->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            
+            <!--Plugin Jplayer-->
+            <script src="js/add-on/jplayer.playlist.min.js"></script>
+            
+            <!--Library Validate của jquery-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+            
+            <!--Đi kèm với validate js-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+        
+            <!--CKEditor-->
+            <!--<script src="js/ckeditor.js"></script>-->
+            
+            <!--File js config của website-->
+            <script src="js/Config.js"></script>
+            
+            <!--Xử lý phần jplayer để nghe nhạc.-->
+            <script src='js/main.js'></script>
+            
+            <!--Hệ thống chức năng của web-->
+            <script src="js/webSystemJs.js"></script>
+            <!-- ====== * ===== << END JAVASCRIPT >> ====== * =====-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

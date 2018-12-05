@@ -1,0 +1,22 @@
+{
+  "playlist": [
+    {
+      "index": "1",
+      "title": "Là tự em đa tình",
+      "artist": "Là tự em đa tình",
+      "mp3": "https://od.lk/d/NTRfMTMxMDA1MDRf/LaTuEmDaTinh-HoDuongLam_3uts5.mp3",
+      "price": "Hồ lâm dương",
+      "song_id": "11",
+      "thumbnail": "https://image.xiaotaiyang.org/upload/8/98/898408ef79a88677ec0d34f102849e61_thumb.png"
+    },
+    {
+      "index": "2",
+      "title": "Là tự em đa tình",
+      "artist": "Là tự em đa tình",
+      "mp3": "https://od.lk/d/NTRfMTMxMDA1MDRf/LaTuEmDaTinh-HoDuongLam_3uts5.mp3",
+      "price": "$0",
+      "song_id": "12",
+      "thumbnail": "https://image.xiaotaiyang.org/upload/8/98/898408ef79a88677ec0d34f102849e61_thumb.png"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&subset=vietnamese');
+
+.linkControl:hover {
+    color: #16e68a !important;
+}
+
+body, html {
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+}
+
+input[name="search"]::placeholder {
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.error{
+    font-style: italic;
+    font-size: 9.5px;
+    color: #de0000;
+}
+
+/*CKEditor*/
+#editor {
+    background: #FFF;
+    padding: 2% 4%;
+    border: dashed 1px #0287D0;
+}
+
+
+/* Customize class "btn" của boostrap */
+
+.btn{
+    font-weight: 400 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.btn-outline-warning:hover{
+    color: white;
+}
+
+/* Customize background class "modal-content" của boostrap */
+
+#modalLogin .modal-content,#modalRegister .modal-content,#ModalCreateSong .modal-content{
+    background: url("https://vanthuonglau.files.wordpress.com/2016/03/bf689d04b6975e0aad560a994daf753ca40d805637ba2-bua71b.jpg")no-repeat;
+    background-size: cover;
+}
+
+
+
+/* rs Sweet alert */
+.swal2-overlay {
+    overflow-y: auto;
+}
+
+.swal2-icon .swal2-success {
+    border-color: #66a8a6 !important;
+}
+
+.swal2-success-line-long {
+    background-color: #66a8a6 !important;
+}
+
+.swal2-success-ring {
+    border: 4px solid rgba(102, 168, 166, 0.2) !important;
+}
+
+.swal2-confirm:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+    background-color: rgba(62, 152, 69, 0.91) !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 15px !important;
+    width: 150px;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    font-weight: unset !important;
+    border-radius: 20px !important;
+    -webkit-transition: all 0.3s !important;
+    -o-transition: all 0.3s !important;
+    -moz-transition: all 0.3s !important;
+    transition: all 0.3s !important;
+}
+
+.swal2-popup {
+    min-width: 300px !important;
+    width: auto !important;
+}
+
+.swal2-cancel.swal2-styled {
+    background-color: #e45a10 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 15px !important;
+    width: 150px;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    font-weight: unset !important;
+    border-radius: 20px !important;
+    -webkit-transition: all 0.3s !important;
+    -o-transition: all 0.3s !important;
+    -moz-transition: all 0.3s !important;
+    transition: all 0.3s !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm:hover {
+    background-color: rgba(93, 224, 141, 0.91) !important;
+}
+
+.swal2-cancel.swal2-styled:hover {
+    background-color: rgba(228, 90, 16, 0.85) !important;
+}
+
+.swal2-confirm:active {
+    background-color: #e65540;
+}
+
+.swal2-popup .swal2-title {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #333333 !important;
+    font-size: 16px !important;
+    line-height: 1.5;
+    padding: 0 15px !important;
+}
+
+.swal2-text {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #333333;
+    font-size: 15px;
+    text-align: center;
+}
+
+.swal2-footer {
+    margin-top: 0;
+}
